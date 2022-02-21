@@ -1,16 +1,15 @@
-console.log('Hello World!');
 const fs = require('fs');
 // import fs from 'fs'
 
 const functionName = process.argv[2];
 
-console.log(`function ${functionName}() {
+function writeFile(name) {
+  fs.writeFileSync(
+    `./${name}.js`,
+    `function ${name}() {
+    
+    }`
+  );
+}
 
-}`);
-
-fs.writeFileSync(
-  `./${functionName}.js`,
-  `function ${functionName}() {
-
-}`
-);
+writeFile(functionName);
