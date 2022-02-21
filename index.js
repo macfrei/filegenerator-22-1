@@ -8,4 +8,9 @@ console.log(`function ${functionName}() {
 
 }`);
 
-fs.writeFileSync('./math.js', '1+2=3');
+fs.writeFileSync(
+  `./${functionName}.js`,
+  `function ${functionName}() {
+
+}`
+);
