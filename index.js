@@ -21,3 +21,5 @@ rl.question('What is the name of your function? ', answer => {
 
   rl.close();
 });
+
+// Bonus: writeFile in own file and exportieren and import
