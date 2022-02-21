@@ -1,5 +1,7 @@
 console.log('Hello World!');
 
-const processExample = process.argv[2];
+const functionName = process.argv[2];
 
-console.log(processExample);
+console.log(`function ${functionName}() {
+    
+}`);
