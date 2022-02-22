@@ -1,22 +1,13 @@
 const fs = require('fs');
-
-const template = {
-  component: name => {
-    const componentString = `import styled from 'styled-components'
-
-        export default function ${name}() {
-            return <div>${name}</div>
-        }
-        `;
-    return componentString;
-  },
-};
+const templates = require('./templates');
 
 function writeFile(name, fileType) {
   const fileName =
     fileType === 'component' ? `./${name}.js` : `./${name}.${fileType}.js`;
 
-  const fileString = template[fileType](name); // template['component']
+  const fileString = templates[fileType](name);
+  // const templateFunction = templates[fileType]
+  // const fileString = templateFunction(name)
 
   fs.writeFileSync(fileName, fileString);
 }
