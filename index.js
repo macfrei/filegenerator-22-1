@@ -1,13 +1,4 @@
-const fs = require('fs');
-
-function writeFile(name) {
-  fs.writeFileSync(
-    `./${name}.js`,
-    `function ${name}() {
-
-    }`
-  );
-}
+const writeFile = require('./writeFile');
 
 const readline = require('readline');
 const { stdin: input, stdout: output } = require('process');
